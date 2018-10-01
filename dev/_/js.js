@@ -1,4 +1,4 @@
-const rowMainNavs = document.querySelectorAll(".row.main_nav");
+const rowMainNavs = document.querySelectorAll(".row");
 let ROWHEIGHTS = [];
 
 const getRowHeights = rows => {
@@ -21,22 +21,22 @@ const centerProjectName = rows => {
   
     row.addEventListener("mouseover", () => {
       row.style.height = `${ROWHEIGHTS[index]}`;
+      row.style.marginLeft = "calc(8.125% * 2 + 10%)";
+      project.style.textAlign = "center";
 
-      client.style.display = "none";
-      category.style.display = "none";
+      client.style.marginLeft = "calc(8.125% * 2 + 10%)";
+      client.style.width = "0";
+      category.style.width = "0";
 
-      setTimeout(() => {
-        project.style.marginLeft = "calc(8.125% * 2 + 10%)";
-        project.style.textAlign = "center";
-      }, 10);
+      client.style.color = "rgba(0,0,0,0)";
+      category.style.color = "rgba(0,0,0,0)";
     });
 
     row.addEventListener("mouseleave", () => {
+      row.style = "";
       project.style = "";
-      setTimeout(() => {
-        client.style = "";
-        category.style = "";
-      }, 350);
+      client.style = "";
+      category.style = "";
     });
   });
 };

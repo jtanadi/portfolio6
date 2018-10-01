@@ -104,10 +104,6 @@ a:hover {
 /*    NAV & WORK    */
 /********************/
 
-.project {
-  transition: all .5s ease;
-}
-
 .main_nav, .work_header, .work_description, .work_tags {
   border-top: 2px solid black;
 }
@@ -140,15 +136,36 @@ a:hover {
   margin-top: 1rem;
 }
 
+
 /*************/
 /*    ROW    */
 /*************/
 
-.row {
-  display: flex;
+.row_sleeve {
   overflow: hidden;
 }
 
+.row {
+  display: flex;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+/* 
+.row:hover {
+  margin-left: calc(8.125% * 2 + 10%);
+}
+
+.row:hover > .project {
+  text-align: center;
+}
+
+.row:hover > .client, .row:hover > .category{
+  width: 0;
+}
+
+.row:hover > .client {
+  margin-left: calc(8.125% * 2 + 10%)
+} */
 
 /*************/
 /*  COLUMNS  */
