@@ -42,6 +42,7 @@ img {
 
 @font-face {
   font-family: 'Unica-Bold';
+  font-weight: bold;
   src: url('./_fonts/');
   src: url('./_fonts/?#iefix') format('embedded-opentype'),
     url('./_fonts//37ABDE_0_0.woff2') format('woff2'),
@@ -52,6 +53,8 @@ img {
 
 @font-face {
   font-family: 'Unica-BoldItalic';
+  font-weight: bold;
+  font-style: italic;
   src: url('./_fonts//37ABDE_1_0.eot');
   src: url('./_fonts//37ABDE_1_0.eot?#iefix') format('embedded-opentype'),
     url('./_fonts//37ABDE_1_0.woff2') format('woff2'),
@@ -62,9 +65,16 @@ img {
 
 h1, h2, h3, h4, p, a {
   font-family: "Unica-Bold", "Helvetica Neue", "Helvetica", sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   font-kerning: normal;
   margin: 0;
+}
+
+em {
+  font-family: "Unica-BoldItalic", "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: bold;
+  font-kerning: normal;
+  font-style: italic;
 }
 
 h1 {
