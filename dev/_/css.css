@@ -2,14 +2,24 @@
 /*    MAIN    */
 /**************/
 
+#container {
+  width: 65%;
+  margin: 4rem auto;
+  max-width: 1200px;
+}
+
 #menu_container {
   position: fixed;
-  left: 17.5%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   width: 65%;
+  max-width: 1200px;
   height: 2.5rem;
   padding-top: 1.5rem;
-  background-color: white;
   border-bottom: 2px solid black;
+  background-color: white;
 }
 
 #menu_textbox{
@@ -20,11 +30,6 @@
 
 #menu_container:hover > #menu_textbox{
   width: 100%;
-}
-
-#container {
-  max-width: 1200px;
-  padding: 4rem 17.5%;
 }
 
 img {
@@ -56,7 +61,7 @@ img {
 }
 
 h1, h2, h3, h4, p, a {
-  font-family: "Unica-Bold";
+  font-family: "Unica-Bold", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: normal;
   font-kerning: normal;
   margin: 0;

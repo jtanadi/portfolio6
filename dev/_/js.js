@@ -1,4 +1,4 @@
-const rowMainNavs = document.querySelectorAll(".row");
+const rowSleeves = document.querySelectorAll(".row_sleeve");
 let ROWHEIGHTS = [];
 
 const getRowHeights = rows => {
@@ -11,17 +11,18 @@ const getRowHeights = rows => {
   });
 };
 
-const centerProjectName = rows => {
-  rows.forEach((row, index) => {
+const centerProjectName = sleeves => {
+  sleeves.forEach((sleeve, index) => {
+    const row = sleeve.querySelector(".row");
     if(row.id === "name") return;
 
     const project = row.querySelector(".project");
     const client = row.querySelector(".client");
     const category = row.querySelector(".category");
   
-    row.addEventListener("mouseover", () => {
+    sleeve.addEventListener("mouseover", () => {
       row.style.height = `${ROWHEIGHTS[index]}`;
-      row.style.marginLeft = "calc(8.125% * 2 + 10%)";
+      row.style.paddingLeft = "calc(8.125% * 2 + 10%)";
       project.style.textAlign = "center";
 
       client.style.marginLeft = "calc(8.125% * 2 + 10%)";
@@ -32,7 +33,7 @@ const centerProjectName = rows => {
       category.style.color = "rgba(0,0,0,0)";
     });
 
-    row.addEventListener("mouseleave", () => {
+    sleeve.addEventListener("mouseleave", () => {
       row.style = "";
       project.style = "";
       client.style = "";
@@ -41,11 +42,11 @@ const centerProjectName = rows => {
   });
 };
 
-getRowHeights(rowMainNavs);
+getRowHeights(rowSleeves);
 
 window.addEventListener("resize", () => {
-  getRowHeights(rowMainNavs);
+  getRowHeights(rowSleeves);
 });
 
-centerProjectName(rowMainNavs);
+centerProjectName(rowSleeves);
 
