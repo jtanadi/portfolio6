@@ -1,3 +1,5 @@
 *.indd
+*.idlk
+.DS_Store
 _fonts
 _imgs
