@@ -83,20 +83,20 @@ h1 {
   line-height: 0.975;
 }
 
-.main_nav p, .main_nav a {
+.nav p, .nav a {
   font-size: 1.75rem;
   letter-spacing: -0.5px;
   line-height: 1.05;
 }
 
 .work_description h2, .work_tags h2, #menu_bar p {
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   letter-spacing: -0.5px;
   line-height: 1.18;
 }
 
 .work_description h2:not(:first-child) {
-  margin-top: 1.5rem;
+  margin-top: 1.35rem;
 }
 
 .work_caption p {
@@ -120,15 +120,16 @@ a:hover {
 /*    NAV & WORK    */
 /********************/
 
-.main_nav, .work_header, .work_description, .work_tags {
+.nav, .work_header, .work_description, .work_tags {
   border-top: 2px solid black;
 }
 
-.main_nav:last-child, .work_description, .work_tags {
+.nav:last-child, .work_description, .work_tags {
   border-bottom: 2px solid black;
 }
 
-.main_nav {
+.nav .project, .nav .client, .nav .category,
+.nav #name, .nav #contact {
   padding-top: 1.125rem;
   padding-bottom: 1.5rem;
 }
@@ -166,22 +167,10 @@ a:hover {
   width: 100%;
   transition: all 0.5s ease;
 }
-/* 
-.row:hover {
-  margin-left: calc(8.125% * 2 + 10%);
-}
 
-.row:hover > .project {
-  text-align: center;
+#name {
+  transition: all 0.5s ease;
 }
-
-.row:hover > .client, .row:hover > .category{
-  width: 0;
-}
-
-.row:hover > .client {
-  margin-left: calc(8.125% * 2 + 10%)
-} */
 
 /*************/
 /*  COLUMNS  */

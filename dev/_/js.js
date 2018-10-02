@@ -1,4 +1,8 @@
 const rowSleeves = document.querySelectorAll(".row_sleeve");
+const profile = document.getElementById("profile");
+const name = document.getElementById("name");
+const contact = document.getElementById("contact");
+
 let ROWHEIGHTS = [];
 
 const getRowHeights = rows => {
@@ -13,8 +17,8 @@ const getRowHeights = rows => {
 
 const centerProjectName = sleeves => {
   sleeves.forEach((sleeve, index) => {
+    if(sleeve === profile) return;
     const row = sleeve.querySelector(".row");
-    if(row.id === "name") return;
 
     const project = row.querySelector(".project");
     const client = row.querySelector(".client");
@@ -42,11 +46,29 @@ const centerProjectName = sleeves => {
   });
 };
 
-getRowHeights(rowSleeves);
+const centerName = () => {
+  const row = profile.querySelector(".row");
 
+  name.addEventListener("mouseenter", e => {
+    row.style.height = `${ROWHEIGHTS[0]}`;
+    row.style.paddingLeft = "calc(8.125% * 2 + 10%)";
+    name.style.textAlign = "center";
+    contact.style.marginLeft = "calc(8.125% * 2 + 10%)";
+    contact.style.width = "0";
+  });
+
+  profile.addEventListener("mouseleave", () => {
+    row.style = "";
+    name.style = "";
+    contact.style = "";
+  });
+};
+
+getRowHeights(rowSleeves);
 window.addEventListener("resize", () => {
   getRowHeights(rowSleeves);
 });
 
 centerProjectName(rowSleeves);
+centerName();
 
