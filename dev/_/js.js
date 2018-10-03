@@ -5,6 +5,7 @@ const contact = document.getElementById("contact");
 
 let ROWHEIGHTS = [];
 
+// This may be unnecessary
 const getRowHeights = rows => {
   ROWHEIGHTS = [];
   
@@ -25,23 +26,24 @@ const centerProjectName = sleeves => {
     const category = row.querySelector(".category");
   
     sleeve.addEventListener("mouseover", () => {
-      row.style.height = `${ROWHEIGHTS[index]}`;
-      row.style.paddingLeft = "calc(8.125% * 2 + 10%)";
-      project.style.textAlign = "center";
+      // Maybe remove this
+      // row.style.height = `${ROWHEIGHTS[index]}`;
 
-      client.style.marginLeft = "calc(8.125% * 2 + 10%)";
-      client.style.width = "0";
-      category.style.width = "0";
+      row.classList.add("row_centered");
+      project.classList.add("project_centered");
 
-      client.style.color = "rgba(0,0,0,0)";
-      category.style.color = "rgba(0,0,0,0)";
+      client.classList.add("nav_hidden");
+      category.classList.add("nav_hidden");
     });
 
     sleeve.addEventListener("mouseleave", () => {
-      row.style = "";
-      project.style = "";
-      client.style = "";
-      category.style = "";
+      // Maybe remove this
+      // row.style = "";
+      row.classList.remove("row_centered");
+      project.classList.remove("project_centered");
+
+      client.classList.remove("nav_hidden");
+      category.classList.remove("nav_hidden");
     });
   });
 };
@@ -64,10 +66,10 @@ const centerName = () => {
   });
 };
 
-getRowHeights(rowSleeves);
-window.addEventListener("resize", () => {
-  getRowHeights(rowSleeves);
-});
+// getRowHeights(rowSleeves);
+// window.addEventListener("resize", () => {
+//   getRowHeights(rowSleeves);
+// });
 
 centerProjectName(rowSleeves);
 centerName();

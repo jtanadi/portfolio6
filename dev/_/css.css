@@ -18,7 +18,7 @@
   max-width: 1240px;
   height: 2.5rem;
   padding-top: 1.5rem;
-  border-bottom: 2px solid black;
+  /* border-bottom: 2px solid black; */
   background-color: white;
   transition: all 0.5s ease;
 }
@@ -126,6 +126,14 @@ a:hover {
   font-style: italic;
 }
 
+.nav a:hover {
+  font-style: normal;
+}
+
+#contact a:hover {
+  font-style: italic;
+}
+
 
 /********************/
 /*    NAV & WORK    */
@@ -143,6 +151,14 @@ a:hover {
 .nav #name, .nav #contact {
   padding-top: 1.125rem;
   padding-bottom: 1.5rem;
+}
+
+.project_centered {
+  text-align: center;
+}
+
+.nav_hidden {
+  visibility: hidden;
 }
 
 .work_header {
@@ -179,8 +195,8 @@ a:hover {
   transition: all 0.5s ease;
 }
 
-#name {
-  transition: all 0.5s ease;
+.row_centered {
+  padding-left: calc(8.125% * 2 + 10%);
 }
 
 /*************/
