@@ -14,6 +14,7 @@ menuBar.addEventListener("mouseup", () => {
   if(!menuStatus) {
     menuStatus = true;
     // menuText.style.display = "none";
+    menuBar.style.display = "none";
     menuNav.style.height = "100vh";
     window.addEventListener("scroll", noscroll);
   } else {
