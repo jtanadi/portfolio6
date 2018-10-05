@@ -54,24 +54,24 @@ img {
 @font-face {
   font-family: 'Unica-Bold';
   font-weight: bold;
-  src: url('./_fonts/');
-  src: url('./_fonts/?#iefix') format('embedded-opentype'),
-    url('./_fonts//37ABDE_0_0.woff2') format('woff2'),
-    url('./_fonts//37ABDE_0_0.woff') format('woff'),
-    url('./_fonts//37ABDE_0_0.ttf') format('truetype'),
-    url('./_fonts//37ABDE_0_0.svg#wf') format('svg');
+  src: url('./_fonts/37ABDE_0_0.eot');
+  src: url('./_fonts/37ABDE_0_0?#iefix') format('embedded-opentype'),
+    url('./_fonts/37ABDE_0_0.woff2') format('woff2'),
+    url('./_fonts/37ABDE_0_0.woff') format('woff'),
+    url('./_fonts/37ABDE_0_0.ttf') format('truetype'),
+    url('./_fonts/37ABDE_0_0.svg#wf') format('svg');
 }
 
 @font-face {
   font-family: 'Unica-BoldItalic';
   font-weight: bold;
   font-style: italic;
-  src: url('./_fonts//37ABDE_1_0.eot');
-  src: url('./_fonts//37ABDE_1_0.eot?#iefix') format('embedded-opentype'),
-    url('./_fonts//37ABDE_1_0.woff2') format('woff2'),
-    url('./_fonts//37ABDE_1_0.woff') format('woff'),
-    url('./_fonts//37ABDE_1_0.ttf') format('truetype'),
-    url('./_fonts//37ABDE_1_0.svg#wf') format('svg');
+  src: url('./_fonts/37ABDE_1_0.eot');
+  src: url('./_fonts/37ABDE_1_0.eot?#iefix') format('embedded-opentype'),
+    url('./_fonts/37ABDE_1_0.woff2') format('woff2'),
+    url('./_fonts/37ABDE_1_0.woff') format('woff'),
+    url('./_fonts/37ABDE_1_0.ttf') format('truetype'),
+    url('./_fonts/37ABDE_1_0.svg#wf') format('svg');
 }
 
 h1, h2, h3, h4, p, a {
