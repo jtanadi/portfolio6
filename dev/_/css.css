@@ -3,9 +3,10 @@
 /**************/
 
 #container {
-  width: 65%;
+  width: 70%;
   margin: 4rem auto;
-  max-width: 1240px;
+  max-width: 1280px;
+  overflow: hidden;
 }
 
 #menu_bar {
@@ -15,7 +16,7 @@
   right: 0;
   margin: 0 auto;
   width: 65%;
-  max-width: 1240px;
+  max-width: 1280px;
   height: 2.5rem;
   padding-top: 1.5rem;
   /* border-bottom: 2px solid black; */
@@ -45,6 +46,10 @@
 
 img {
   width: 100%;
+}
+
+ul {
+  padding: 0;
 }
 
 /********************/
@@ -139,6 +144,10 @@ a:hover {
 /*    NAV & WORK    */
 /********************/
 
+#name {
+  transition: all 0.5s ease;
+}
+
 .nav, .work_header, .work_description, .work_tags {
   border-top: 2px solid black;
 }
@@ -151,10 +160,6 @@ a:hover {
 .nav #name, .nav #contact {
   padding-top: 1.125rem;
   padding-bottom: 1.5rem;
-}
-
-.project_centered {
-  text-align: center;
 }
 
 .nav_hidden {
@@ -185,11 +190,8 @@ a:hover {
 /*    ROW    */
 /*************/
 
-.row_sleeve {
-  overflow: hidden;
-}
-
 .row {
+  overflow: hidden;
   display: flex;
   width: 100%;
   transition: all 0.5s ease;
@@ -197,6 +199,7 @@ a:hover {
 
 .row_centered {
   padding-left: calc(8.125% * 2 + 10%);
+  text-align: center;
 }
 
 /*************/
