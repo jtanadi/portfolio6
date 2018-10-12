@@ -131,7 +131,7 @@ a:hover {
   font-style: italic;
 }
 
-.nav a:hover {
+#nav_container a:hover {
   font-style: normal;
 }
 
@@ -144,10 +144,6 @@ a:hover {
 /*    NAV & WORK    */
 /********************/
 
-#name {
-  transition: all 0.5s ease;
-}
-
 .nav, .work_header, .work_description, .work_tags {
   border-top: 2px solid black;
 }
@@ -156,8 +152,11 @@ a:hover {
   border-bottom: 2px solid black;
 }
 
-.nav .project, .nav .client, .nav .category,
-.nav #name, .nav #contact {
+.nav, #name {
+  transition: all 0.5s ease;
+}
+
+.nav {
   padding-top: 1.125rem;
   padding-bottom: 1.5rem;
 }
@@ -194,7 +193,6 @@ a:hover {
   overflow: hidden;
   display: flex;
   width: 100%;
-  transition: all 0.5s ease;
 }
 
 .row_centered {
